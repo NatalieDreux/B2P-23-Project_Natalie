@@ -1,0 +1,24 @@
+                                                                                        % Step 1: Install the COBRA Toolbox
+                                                                                        % Download and install COBRA Toolbox from GitHub. in gitdash command window:
+$ cd(path/to/desired/folder)
+$ 'git clone --depth=1 https://github.com/opencobra/cobratoolbox.git cobratoolbox');    % saves the toolbox in designated folder from previous path
+
+                                                                                        % Step 2: Change to the Toolbox Directory
+                                                                                        % Navigate into the cobratoolbox directory
+$ cd(path/to/desired/folder/cobratoolbox)
+>> cd ('C:/path/to/cobratoolbox')
+
+                                                                                        % Step 3: Initialize COBRA Toolbox in MATLAB
+                                                                                        % Run 'initCobraToolbox' command in MATLAB; making sure working directory is set to 'C:/.../cobratoolbox'
+>> initCobraToolbox                                                                   
+
+                                                                                       % Step 4: Load BiGG Model with COBRA Toolbox
+                                                                                       % Load the BiGG model in SBML format using the 'readCbModel' function
+>> model = readCbModel('C:/Users/natal/Documents/e_coli_core.xml');
+
+                                                                                       % Step 5: Explore and Analyze the Model
+                                                                                       % Display the details of the loaded model structure
+>> model
+
+                                                                                       % Display reaction identifiers
+>> model.rxns
